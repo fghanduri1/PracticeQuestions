@@ -1,0 +1,27 @@
+//Given N, write a function that returns the number of unique ways you can climb the staircase.
+//The order of the steps matters.
+
+class stairs 
+{ 
+	// recursive program to find n'th fibonacci number 
+	static int fib(int n) 
+	{ 
+	if (n <= 1) 
+		return n; 
+	return fib(n-1) + fib(n-2); 
+	} 
+	
+	// Returns number of ways to reach s'th stair 
+	static int countWays(int z) 
+	{ 
+		return fib(z + 1); 
+	} 
+
+
+	// Driver program to test above function
+	public static void main (String args[]) 
+	{ 
+		int z = 4; 
+			System.out.println("Number of ways = "+ countWays(z)); 
+	} 
+}
